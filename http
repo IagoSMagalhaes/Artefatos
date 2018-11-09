@@ -1,0 +1,55 @@
+                                                                  Requisição HTTP
+
+  Quando digitamos um determinado endereço no browser ou por alguma ferramenta como PostMan, é enviado uma requisição Http composta 
+por diversos componentes para o servidor, onde o mesmo varre e verifica se encontra o que foi solicitado, um dos erros mais comuns é quando
+não é encontrado o caminho dessa requisição dentro do servidor, é aí que recebemos o típico 404 Not Found.
+
+ Em definição técnica, HTTP significa Hyper Text Transfer Protocol, ele é responsável pela transferência dos dados das páginas HTML/JSP/XHTML
+do cliente para o servidor e do servidor para o cliente. Toda requisição possui um cabeçalho(Header) que contém as informações de metada,
+como por exemplo o encode e um corpo de mensagem (Body) que por vezes pode ser vazio e em outras informa o servidor detalhes do que está
+sendo solicitado, para cada requisição, há um método que dirá qual a ação a ser executada em um determinado recurso, quando a requisição
+parte da internet para o servidor é chamado de Request e quando sai do servidor a resposta é chamada de Response. 
+
+Existem alguns tipos de métodos HTTP possíveis, os mais utilizados são:
+
+ GET: É uma requisição para trazer os dados do servidor para o cliente, vale ressaltar que existe uma limitação do tamanho da mensagem e
+a String não pode conter mais que 255 caracteres. Os parâmetros a serem enviados pela requisição é embutida dentro da URL, a partir do
+caracter ? o HTTP entende que o que virá a seguir são chaves e valores a serem consumidos pelo método, seguido de chave e valor e o 
+caracter & para separar as variveis.  Ex: URL/buscarUsuario?nome=iago&cidade=saoPaulo
+
+ POST: É a requisição de enviar dados a serem armazenados no servidor, as variáveis a serem submetidas são enviadas pelo corpo da 
+ requisição, não ficando visíveis na URL. Ex: Salvar um novo usuário.
+ 
+ PUT: Responsável por criar ou alterar dados identificado por uma URL e como o post, as variáveis a serem submetidas são enviadas pelo 
+ corpo da requisição, não ficando visíveis na URL. Ex: Editar/Criar um novo usuário.
+ 
+ DELETE:Responsável por excluir dados do servidor, onde o corpo da URL determina qual entidade será deletada e em seguida geralmente 
+ é evidenciado o Identificador Único(ID) do objeto.
+
+                                                                Status Response
+
+O Response sempre tem como retorno o corpo com os dados processados pelo servidor e o código do status da requisição que determina um 
+comportamento, dessa forma, podemos entender o que pode ter acontecido, os mais comuns são:
+
+  200: OK;
+  201: Criação OK;
+  400 : Solicitação Inválida;
+  401: Não autorizado;
+  404: Não encontrado;
+  405: Método não permitido;
+  408: Timeout;
+  409: Conflito;
+  415: Media Type não compatível;
+  500: Erro interno do servidor;
+  502: Erro com Gateway;
+  504: Gateway Timeout;
+
+
+                                                                  Conclusão
+
+O protocolo HTTP é de suma importância, é um padrão de requisições pré-definidas permitindo a comunicação entre os sistemas que 
+compartilham do mesmo protocolo.
+Entender seu escopo e sua forma de execução é essencial para um desenvolvedor, capturar, tratar e armazenar os dados são importantes, 
+mas todo o fluxo só acontecerá corretamente se não houver erros com o protocolo de transmissão de dados.
+
+   Iago Seixeiro Magalhães
